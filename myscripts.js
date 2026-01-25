@@ -14,13 +14,15 @@ buttons.forEach((button) => {
 
         if (buttonText == '=') {
             operation = text.textContent.split(" ");
-            num1 = operation[0]
+            num1 = Number(operation[0])
             operator = operation[1]
-            num2 = operation[2]
+            num2 = Number(operation[2])
 
             console.log('num1 ' + num1);
             console.log('operator ' + operator);
             console.log('num2 ' + num2);
+
+            text.textContent = operate(num1, operator, num2);
         } else if (operators.includes(buttonText)) {
             text.textContent += " " + buttonText + " ";
         } else {
