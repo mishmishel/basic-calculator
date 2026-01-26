@@ -23,6 +23,8 @@ buttons.forEach((button) => {
             console.log('num2 ' + num2);
 
             text.textContent = operate(num1, operator, num2);
+        } else if (buttonText == 'AC') {
+            text.textContent = '';
         } else if (operators.includes(buttonText)) {
             text.textContent += " " + buttonText + " ";
         } else {
