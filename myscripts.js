@@ -9,6 +9,7 @@ const text = document.querySelector("#text");
 const buttons = document.querySelectorAll("button");
 
 let autoClear = false;
+let autoEvaluate = false;
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
@@ -33,7 +34,17 @@ buttons.forEach((button) => {
             text.textContent = '';
         } else if (operators.includes(buttonText)) {
             autoClear = false;
+            if (autoEvaluate == true) {
+                operation = text.textContent.split(" ");
+                num1 = Number(operation[0])
+                operator = operation[1]
+                num2 = Number(operation[2])
+                text.textContent = operate(num1, operator, num2);
+                autoEvaluate = false;
+            }
+            
             text.textContent += " " + buttonText + " ";
+            autoEvaluate = true;
         } else {
             if (autoClear) {
                 text.textContent = "";
