@@ -9,7 +9,7 @@ const text = document.querySelector("#text");
 const buttons = document.querySelectorAll("button");
 
 let autoClear = false;
-let autoEvaluate = false;
+let count = 0;
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
@@ -26,25 +26,27 @@ buttons.forEach((button) => {
                 autoClear = true;
             } else {
                 text.textContent = operate(num1, operator, num2);
+                count = 0;
             }
-
-            autoClear = true;
 
         } else if (buttonText == 'AC') {
             text.textContent = '';
         } else if (operators.includes(buttonText)) {
             autoClear = false;
-            if (autoEvaluate == true) {
+
+            if (count >= 1) {
                 operation = text.textContent.split(" ");
                 num1 = Number(operation[0])
                 operator = operation[1]
                 num2 = Number(operation[2])
                 text.textContent = operate(num1, operator, num2);
-                autoEvaluate = false;
+                count = 0;
             }
-            
+
             text.textContent += " " + buttonText + " ";
-            autoEvaluate = true;
+            console.log(count);
+            count++;
+            console.log(count);
         } else {
             if (autoClear) {
                 text.textContent = "";
