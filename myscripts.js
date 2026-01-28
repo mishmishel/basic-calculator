@@ -74,7 +74,12 @@ buttons.forEach((button) => {
             console.log(count);
         } else if (buttonText == '.'){
             console.log('Pressed!');
-            if (decimalPressed == false) {
+            console.log(autoClear);
+            if (autoClear) {
+                text.textContent = ".";
+                decimalPressed = true;
+                autoClear = false;
+            } else if (decimalPressed == false) {
                 text.textContent += buttonText;
                 decimalPressed = true;
             }
