@@ -84,8 +84,18 @@ buttons.forEach((button) => {
                 decimalPressed = true;
             }
         } else if (buttonText == '◀︎') {
-            let part = text.textContent.slice(0, -1);
-            text.textContent = part;
+            let toDelete = text.textContent.split(" ");
+            let newDisplay;
+            console.log(toDelete);
+            if (operators.includes(toDelete[1]) && toDelete[2] == '') {
+                newDisplay = toDelete.slice(0, -2); 
+                console.log(newDisplay);
+                text.textContent = newDisplay.join(" ");
+                count = 0;
+            } else {
+                newDisplay = toDelete.join(" ");
+                text.textContent = newDisplay.slice(0, -1);
+            }
         } else {
             if (autoClear) {
                 text.textContent = "";
