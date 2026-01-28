@@ -83,6 +83,9 @@ buttons.forEach((button) => {
                 text.textContent += buttonText;
                 decimalPressed = true;
             }
+        } else if (buttonText == '◀︎') {
+            let part = text.textContent.slice(0, -1);
+            text.textContent = part;
         } else {
             if (autoClear) {
                 text.textContent = "";
