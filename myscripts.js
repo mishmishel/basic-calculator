@@ -13,12 +13,14 @@ const buttons = document.querySelectorAll("button");
 let autoClear = false;
 let count = 0;
 let decimalPressed = false;
+let canAddOperators = true;
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
         const buttonText = button.textContent;
 
         if (buttonText == '=') {
+            canAddOperators = true;
             operation = text.textContent.split(" ");
             num1 = Number(operation[0])
             operator = operation[1]
@@ -43,6 +45,7 @@ buttons.forEach((button) => {
             }
 
         } else if (buttonText == 'AC') {
+            canAddOperators = true;
             text.textContent = '';
             count = 0;
             decimalPressed = false;
@@ -52,26 +55,36 @@ buttons.forEach((button) => {
 
             if (count >= 1) {
                 operation = text.textContent.split(" ");
-                num1 = Number(operation[0])
-                operator = operation[1]
-                num2 = Number(operation[2])
 
-                result = operate(num1, operator, num2);
-                let str = result.toString();
-                if (str.length > 10) {
-                    console.log(result);
-                    let n = result.toFixed(10);
-                    text.textContent = n;
+                if (operation[2] != '') {
+                    canAddOperators = true;
+                    num1 = Number(operation[0])
+                    operator = operation[1]
+                    num2 = Number(operation[2])
+
+                    console.log(operation);
+                    result = operate(num1, operator, num2);
+                    let str = result.toString();
+                    if (str.length > 10) {
+                        console.log(result);
+                        let n = result.toFixed(10);
+                        text.textContent = n;
+                    } else {
+                        text.textContent = result;
+                    }
+                    count = 0;
                 } else {
-                    text.textContent = result;
+                    canAddOperators = false;
                 }
-                count = 0;
             }
 
-            text.textContent += " " + buttonText + " ";
-            console.log(count);
-            count++;
-            console.log(count);
+            if (canAddOperators)  {
+                text.textContent += " " + buttonText + " ";
+                console.log(count);
+                count++;
+                console.log(count);
+            }
+            
         } else if (buttonText == '.'){
             console.log('Pressed!');
             console.log(autoClear);
