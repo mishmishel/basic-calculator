@@ -1,1 +1,2 @@
-# basic-calculator
+# Basic Calculator
+This project was done as part of the Odin Project curriculum upon my completion of the Odin Project Foundations Course. This project demonstrates my capabilities in HTML, CSS, and JavaScript.
