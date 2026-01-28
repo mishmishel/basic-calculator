@@ -44,6 +44,8 @@ buttons.forEach((button) => {
 
         } else if (buttonText == 'AC') {
             text.textContent = '';
+            count = 0;
+            decimalPressed = false;
         } else if (operators.includes(buttonText)) {
             decimalPressed = false;
             autoClear = false;
