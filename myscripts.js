@@ -3,6 +3,8 @@ let operator;
 let num2;
 let operation;
 
+let result;
+
 let operators = ['/', '*', '+', '-', 'x', '=']
 
 const text = document.querySelector("#text");
@@ -25,7 +27,16 @@ buttons.forEach((button) => {
                 text.textContent = 'ZERO DIVISION ERROR';
                 autoClear = true;
             } else {
-                text.textContent = operate(num1, operator, num2);
+                result = operate(num1, operator, num2);
+                let str = result.toString();
+                if (str.length > 10) {
+                    console.log(result);
+                    let n = result.toFixed(10);
+                    text.textContent = n;
+                } else {
+                    text.textContent = result;
+                }
+                autoClear = true;
                 count = 0;
             }
 
@@ -39,7 +50,16 @@ buttons.forEach((button) => {
                 num1 = Number(operation[0])
                 operator = operation[1]
                 num2 = Number(operation[2])
-                text.textContent = operate(num1, operator, num2);
+
+                result = operate(num1, operator, num2);
+                let str = result.toString();
+                if (str.length > 10) {
+                    console.log(result);
+                    let n = result.toFixed(10);
+                    text.textContent = n;
+                } else {
+                    text.textContent = result;
+                }
                 count = 0;
             }
 
