@@ -1,11 +1,12 @@
 .container {
     margin-top: 50px;
-    background-color: black;
+    background-color: rgb(255, 180, 223);
+    border: solid 4px rgb(255, 104, 187);
     width: 300px;
     display: flex;
     flex-direction: column;
     justify-self: center;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 p {
@@ -14,8 +15,11 @@ p {
 }
 
 .text-box {
-    background-color: rgb(211, 211, 211);
-    margin-left: 10px;
+    background-color: rgb(255, 222, 246);
+    color: rgb(255, 8, 144);
+    border: solid 4px rgb(255, 200, 230);
+    border-radius: 12px;
+    margin-left: 6px;
     margin-bottom: 10px;
     margin-top: 10px;
     width: 280px;
@@ -25,6 +29,10 @@ p {
 button {
     width: 50px;
     height: 50px;
+    border: solid 3px rgb(255, 220, 242);
+    border-radius: 12px;
+    background-color: rgb(255, 228, 245);
+    color: rgb(255, 14, 187);
 }
 
 .buttons {
