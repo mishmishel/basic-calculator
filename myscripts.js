@@ -12,6 +12,7 @@ const buttons = document.querySelectorAll("button");
 
 let autoClear = false;
 let count = 0;
+let decimalPressed = false;
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
@@ -36,6 +37,7 @@ buttons.forEach((button) => {
                 } else {
                     text.textContent = result;
                 }
+
                 autoClear = true;
                 count = 0;
             }
@@ -43,6 +45,7 @@ buttons.forEach((button) => {
         } else if (buttonText == 'AC') {
             text.textContent = '';
         } else if (operators.includes(buttonText)) {
+            decimalPressed = false;
             autoClear = false;
 
             if (count >= 1) {
@@ -67,11 +70,17 @@ buttons.forEach((button) => {
             console.log(count);
             count++;
             console.log(count);
+        } else if (buttonText == '.'){
+            console.log('Pressed!');
+            if (decimalPressed == false) {
+                text.textContent += buttonText;
+                decimalPressed = true;
+            }
         } else {
             if (autoClear) {
                 text.textContent = "";
                 autoClear = false;
-            }
+            } 
             text.textContent += buttonText;
         }
     })
