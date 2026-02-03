@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kapakana:wght@300..400&display=swap');
 
 body {
-    background-color: black;
+    background: radial-gradient(rgb(255, 173, 229), rgb(255, 255, 255));
 }
 
 .container {
