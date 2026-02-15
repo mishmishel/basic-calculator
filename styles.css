@@ -1,82 +1,82 @@
-@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=WDXL+Lubrifont+JP+N&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kapakana:wght@300..400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=WDXL+Lubrifont+JP+N&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kapakana:wght@300..400&display=swap");
 
 body {
-    background: radial-gradient(rgb(255, 173, 229), rgb(255, 255, 255));
+  background: black;
 }
 
 .container {
-    margin-top: 120px;
-    background-color: rgb(255, 180, 223);
-    border: solid 4px rgb(255, 104, 187);
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
-    border-radius: 15px;
+  margin-top: 120px;
+  background-color: rgb(255, 180, 223);
+  border: solid 4px rgb(255, 104, 187);
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  border-radius: 15px;
 }
 
 p {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    margin-left: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-left: 20px;
 }
 
 .text-box {
-    background-color: rgb(255, 222, 246);
-    color: rgb(255, 8, 144);
-    border: solid 4px rgb(255, 200, 230);
-    border-radius: 16px;
-    margin-left: 16px;
-    margin-bottom: 16px;
-    margin-top: 16px;
-    width: 360px;
-    height: 80px;
+  background-color: rgb(255, 222, 246);
+  color: rgb(255, 8, 144);
+  border: solid 4px rgb(255, 200, 230);
+  border-radius: 16px;
+  margin-left: 16px;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  width: 360px;
+  height: 80px;
 }
 
 #text {
-    font-size: 35px;
-    font-family: "WDXL Lubrifont JP N", sans-serif;
-    margin-left: 30px;
-    margin-top: 20px;
+  font-size: 35px;
+  font-family: "WDXL Lubrifont JP N", sans-serif;
+  margin-left: 30px;
+  margin-top: 20px;
 }
 
 button {
-    width: 70px;
-    height: 70px;
-    border: solid 3px rgb(255, 220, 242);
-    border-radius: 12px;
-    background-color: rgb(255, 228, 245);
-    color: rgb(255, 14, 187);
-    font-size: 20px;
-    font-family: "Comic Relief", system-ui;
+  width: 70px;
+  height: 70px;
+  border: solid 3px rgb(255, 220, 242);
+  border-radius: 12px;
+  background-color: rgb(255, 228, 245);
+  color: rgb(255, 14, 187);
+  font-size: 20px;
+  font-family: "Comic Relief", system-ui;
 }
 
 .buttons {
-    margin-left: 15px;
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 8px;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
 }
 
 .row-4 {
-    margin-bottom: 6px;
+  margin-bottom: 6px;
 }
 
 .footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #loveNote {
-    margin-top: 70px;
-    margin-left: 0;
-    color: white;
-    font-family: "Kapakana", cursive;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 40px;
+  margin-top: 70px;
+  margin-left: 0;
+  color: white;
+  font-family: "Kapakana", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
 }
